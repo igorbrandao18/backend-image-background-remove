@@ -41,8 +41,8 @@
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/igorbrandao/qik-background.git
-   cd qik-background
+   git clone https://github.com/igorbrandao18/image-background-remove.git
+   cd image-background-remove
    ```
 
 2. Install frontend dependencies:
@@ -109,12 +109,12 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 🙏 Acknowledgments
 
-Created with passion by [Igor Brandão](https://github.com/igorbrandao). Special thanks to everyone who made this project possible and for the opportunity to create something amazing! Your support and trust mean the world to me.
+Created with passion by [Igor Brandão](https://github.com/igorbrandao18). Special thanks to everyone who made this project possible and for the opportunity to create something amazing! Your support and trust mean the world to me.
 
 ---
 
 <div align="center">
   Made with ❤️ by Igor Brandão
   
-  [GitHub](https://github.com/igorbrandao) • [LinkedIn](https://linkedin.com/in/igorbrandao)
+  [GitHub](https://github.com/igorbrandao18) • [LinkedIn](https://linkedin.com/in/igorbrandao)
 </div>
