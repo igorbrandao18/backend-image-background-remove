@@ -1,36 +1,95 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Image Background Remover - Backend
 
-## Getting Started
+A FastAPI backend service that removes backgrounds from images using the `rembg` library.
 
-First, run the development server:
+## Features
+
+- Upload images (PNG, JPG, JPEG)
+- Remove background using AI (U2NET model)
+- Return base64 encoded processed image
+- CORS support for frontend integration
+- Real-time progress logging
+- Error handling and validation
+
+## Tech Stack
+
+- FastAPI
+- Python 3.x
+- rembg for background removal
+- Pillow for image processing
+- uvicorn for ASGI server
+
+## Prerequisites
+
+- Python 3.x
+- pip (Python package manager)
+
+## Installation
+
+1. Clone the repository:
+   ```bash
+   git clone git@github.com:igorbrandao18/backend-image-background-remove.git
+   cd backend-image-background-remove
+   ```
+
+2. Set up Python virtual environment and install dependencies:
+   ```bash
+   python3 -m venv venv
+   source venv/bin/activate  # On Windows use: .\venv\Scripts\activate
+   pip install rembg pillow fastapi python-multipart uvicorn
+   ```
+
+## Running the Application
+
+1. Start the FastAPI server:
+   ```bash
+   cd src
+   python -m api.server
+   ```
+
+   The server will start at http://localhost:8000
+
+2. API endpoints:
+   - POST /api/remove-background - Upload and process image
+   - OPTIONS /api/remove-background - CORS preflight
+
+## API Usage
+
+### Remove Background
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+curl -X POST "http://localhost:8000/api/remove-background" \
+     -H "accept: application/json" \
+     -H "Content-Type: multipart/form-data" \
+     -F "file=@image.jpg"
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Response:
+```json
+{
+  "processedImage": "data:image/png;base64,...",
+  "message": "Background removed successfully"
+}
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Development
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+The project structure:
+```
+src/
+└── api/
+    ├── __init__.py
+    └── server.py
+```
 
-## Learn More
+## Contributing
 
-To learn more about Next.js, take a look at the following resources:
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## License
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This project is licensed under the MIT License - see the LICENSE file for details.
