@@ -116,5 +116,5 @@ Created with passion by [Igor Brandão](https://github.com/igorbrandao18). Speci
 <div align="center">
   Made with ❤️ by Igor Brandão
   
-  [GitHub](https://github.com/igorbrandao18) • [LinkedIn](https://linkedin.com/in/igorbrandao)
+  [GitHub](https://github.com/igorbrandao18) • [LinkedIn](https://www.linkedin.com/in/igorbrandaodeveloper/)
 </div>
