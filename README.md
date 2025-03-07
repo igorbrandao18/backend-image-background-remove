@@ -1,95 +1,120 @@
-# Image Background Remover - Backend
+# 🎨 Qik Background - AI Image Processing
 
-A FastAPI backend service that removes backgrounds from images using the `rembg` library.
+> Professional background removal powered by advanced AI technology, created with ❤️ by Igor Brandão.
 
-## Features
+<div align="center">
+  <img src="public/grid.svg" alt="Grid Pattern" width="100" />
+</div>
 
-- Upload images (PNG, JPG, JPEG)
-- Remove background using AI (U2NET model)
-- Return base64 encoded processed image
-- CORS support for frontend integration
-- Real-time progress logging
-- Error handling and validation
+## ✨ Features
 
-## Tech Stack
+- 🖼️ **Instant Background Removal** - Remove backgrounds from images in seconds
+- 🤖 **AI-Powered** - Utilizes advanced U2NET model for precise results
+- 🎯 **High Precision** - Professional-grade output quality
+- 🚀 **Real-time Processing** - Watch the magic happen instantly
+- 📱 **Responsive Design** - Works beautifully on all devices
+- 🌓 **Dark Mode Support** - Easy on the eyes, day or night
 
-- FastAPI
-- Python 3.x
-- rembg for background removal
-- Pillow for image processing
-- uvicorn for ASGI server
+## 🛠️ Tech Stack
 
-## Prerequisites
+### Frontend
+- ⚛️ Next.js 14 with App Router
+- 💅 Styled Components
+- 🎭 TypeScript
+- 📡 Axios for API communication
 
-- Python 3.x
-- pip (Python package manager)
+### Backend
+- 🐍 FastAPI
+- 🤖 rembg for AI processing
+- 🖼️ Pillow for image handling
+- 🚀 uvicorn for ASGI server
 
-## Installation
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js 18+ and npm
+- Python 3.x and pip
+- Git
+
+### Installation
 
 1. Clone the repository:
    ```bash
-   git clone git@github.com:igorbrandao18/backend-image-background-remove.git
-   cd backend-image-background-remove
+   git clone https://github.com/igorbrandao/qik-background.git
+   cd qik-background
    ```
 
-2. Set up Python virtual environment and install dependencies:
+2. Install frontend dependencies:
    ```bash
-   python3 -m venv venv
-   source venv/bin/activate  # On Windows use: .\venv\Scripts\activate
-   pip install rembg pillow fastapi python-multipart uvicorn
+   npm install
    ```
 
-## Running the Application
+3. Set up Python environment:
+   ```bash
+   python -m venv venv
+   source venv/bin/activate  # On Windows: .\venv\Scripts\activate
+   pip install -r requirements.txt
+   ```
 
-1. Start the FastAPI server:
+### Running the Application
+
+1. Start the backend server:
    ```bash
    cd src
    python -m api.server
    ```
 
-   The server will start at http://localhost:8000
+2. In a new terminal, start the frontend:
+   ```bash
+   npm run dev
+   ```
 
-2. API endpoints:
-   - POST /api/remove-background - Upload and process image
-   - OPTIONS /api/remove-background - CORS preflight
+3. Open [http://localhost:3000](http://localhost:3000) in your browser 🎉
 
-## API Usage
+## 🎯 Project Structure
 
-### Remove Background
-
-```bash
-curl -X POST "http://localhost:8000/api/remove-background" \
-     -H "accept: application/json" \
-     -H "Content-Type: multipart/form-data" \
-     -F "file=@image.jpg"
+```
+.
+├── src/
+│   ├── app/                    # Next.js pages and layouts
+│   ├── components/             # React components
+│   ├── styles/                 # Theme and global styles
+│   ├── types/                  # TypeScript definitions
+│   └── api/                    # FastAPI backend
+├── public/                     # Static assets
+└── package.json               # Project configuration
 ```
 
-Response:
-```json
-{
-  "processedImage": "data:image/png;base64,...",
-  "message": "Background removed successfully"
-}
-```
+## 🎨 Design Features
 
-## Development
+- Modern, clean interface
+- Smooth animations and transitions
+- Intuitive drag-and-drop upload
+- Real-time processing feedback
+- Before/After image comparison
+- Responsive grid layouts
 
-The project structure:
-```
-src/
-└── api/
-    ├── __init__.py
-    └── server.py
-```
-
-## Contributing
+## 🤝 Contributing
 
 1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add some amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
+2. Create your feature branch: `git checkout -b feature/amazing-feature`
+3. Commit your changes: `git commit -m 'Add some amazing feature'`
+4. Push to the branch: `git push origin feature/amazing-feature`
 5. Open a Pull Request
 
-## License
+## 📝 License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🙏 Acknowledgments
+
+Created with passion by [Igor Brandão](https://github.com/igorbrandao). Special thanks to everyone who made this project possible and for the opportunity to create something amazing! Your support and trust mean the world to me.
+
+---
+
+<div align="center">
+  Made with ❤️ by Igor Brandão
+  
+  [GitHub](https://github.com/igorbrandao) • [LinkedIn](https://linkedin.com/in/igorbrandao)
+</div>
