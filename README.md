@@ -3,7 +3,7 @@
 > Professional background removal powered by advanced AI technology, created with ❤️ by Igor Brandão.
 
 <div align="center">
-  <img src="public/grid.svg" alt="Grid Pattern" width="100" />
+  <img src="public/demo/processed.png" alt="Demo - Background Removal" width="600" />
 </div>
 
 ## ✨ Features
